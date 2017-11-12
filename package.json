@@ -1,12 +1,15 @@
 {
-    "name": "bigstar_chores",
-    "version": "0.0.1",
-    "engines": {
-      "node": "8.9.0"
-    },
-    "scripts": {
-      "build": "cd client && npm install && npm run build && cd ..",
-      "deploy": "cp -a client/build/. public/",
-      "postinstall": "npm run build && npm run deploy && echo ‘Client built!’"
-    }
+  "name": "bigstar_chores",
+  "version": "0.0.1",
+  "engines": {
+    "node": "8.9.0"
+  },
+  "scripts": {
+    "build": "cd client && npm install && npm run build && cd ..",
+    "deploy": "cp -a client/build/. public/",
+    "postinstall": "npm run build && npm run deploy && echo ‘Client built!’"
+  },
+  "dependencies": {
+    "material-ui": "^0.19.4"
+  }
 }
