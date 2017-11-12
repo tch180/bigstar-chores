@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171110205543) do
+ActiveRecord::Schema.define(version: 20171111185321) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,10 @@ ActiveRecord::Schema.define(version: 20171110205543) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "child_id"
+    t.bigint "parent_id"
+    t.index ["child_id"], name: "index_chores_on_child_id"
+    t.index ["parent_id"], name: "index_chores_on_parent_id"
   end
 
   create_table "parents", force: :cascade do |t|
@@ -36,4 +40,6 @@ ActiveRecord::Schema.define(version: 20171110205543) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "chores", "children"
+  add_foreign_key "chores", "parents"
 end
