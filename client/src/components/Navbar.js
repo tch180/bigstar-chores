@@ -6,6 +6,7 @@ import Menu from 'material-ui/Menu';
 import MenuItem from 'material-ui/MenuItem';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import Homepage from '../components/Homepage';
 
 
 const Navstyle = styled.div`
@@ -19,8 +20,6 @@ margin-bottom: 1px;
     margin-top: 0px;
     border-bottom-width: 1px;
 }
-
-
 `
 
 
@@ -62,6 +61,7 @@ class Navbar extends Component {
     render() {
         return (   
             <div>
+            <div>
                 <Navstyle>
             <div>
             <h1>BigStar Chores</h1>
@@ -92,8 +92,11 @@ class Navbar extends Component {
                 </div>
                 </Navstyle>
             </div>
+            <div>
+                            <Homepage/>
+                            </div>
             
-        
+        </div>
         );
     }
 }
