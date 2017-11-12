@@ -1,4 +1,4 @@
 class Parent < ApplicationRecord
-    has_many :Chore
-    has_many :Children
+    has_many :chores
+    has_many :children
 end
