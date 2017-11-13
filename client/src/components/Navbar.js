@@ -15,10 +15,14 @@ height: 3vw;
 color: white;
 text-transform: uppercase;
 font-weight: 400;
+
 h1{
 margin-bottom: 1px;
     margin-top: 0px;
     border-bottom-width: 1px;
+}
+div {
+    width:25%;
 }
 `
 
@@ -61,11 +65,12 @@ class Navbar extends Component {
     render() {
         return (   
             <div>
-            <div>
-                <Navstyle>
+            
+               
             <div>
             <h1>BigStar Chores</h1>
-
+            <Navstyle>
+            <div>
                 <MuiThemeProvider muiTheme={getMuiTheme()}>
                 <div>    
                      <RaisedButton
@@ -80,7 +85,7 @@ class Navbar extends Component {
                        onRequestClose={this.handleRequestClose}
                      >
                        <Menu>
-                         <MenuItem primaryText="Parent" />
+                         <MenuItem primaryText="Parent" Link="./components/parents"/>
                          <MenuItem primaryText="Children &amp; Chores" />
                          <MenuItem primaryText="Chores &amp; Points" />
                          <MenuItem primaryText="Rewards" />

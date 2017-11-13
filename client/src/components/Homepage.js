@@ -2,6 +2,7 @@
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import styled from 'styled-components'
@@ -14,15 +15,16 @@ border: 2px solid black;
 
 div {
     /* margin: 10px; */
-  padding: 10px 10px 10px 10px;
+  /* padding: 10px 10px 10px 10px; */
   /* display: inline-flex;
   justify-content: flex-end;
   align-items: flex-end;
   align-content: space-around; */
   /* background-color: lightslategrey; */
+  width:30em;
+
 }
-#FlatButton {
-    background-color: darkgrey;}
+
 `
 
 
@@ -51,7 +53,7 @@ class  Homepage extends Component {
         
       </CardText>
       <CardActions>
-        <FlatButton label="Create Chore" link='/'/>
+        <FlatButton label="Create Chore" />
         <FlatButton label="Add/Delete/Update Child" />
         <FlatButton label="Edit Chores " />
         
