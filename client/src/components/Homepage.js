@@ -9,12 +9,20 @@ import styled from 'styled-components'
 const Homepagestyle = styled.div`
 padding: 50px 15px 15px 0px
 position: absolute;
+background-color: lightslategrey;
+border: 2px solid black;  
+
 div {
-  display: inline-flex;
+    /* margin: 10px; */
+  padding: 10px 10px 10px 10px;
+  /* display: inline-flex;
   justify-content: flex-end;
   align-items: flex-end;
-  align-content: space-around;
+  align-content: space-around; */
+  /* background-color: lightslategrey; */
 }
+#FlatButton {
+    background-color: darkgrey;}
 `
 
 
@@ -27,8 +35,8 @@ class  Homepage extends Component {
                 <div>
     <Card>
       <CardHeader
-        title="URL Avatar"
-        subtitle="Subtitle"
+        title="parent.name"
+        subtitle="# of kids"
         avatar="https://i.imgur.com/s6Faxdk.jpg?2"
       />
       <CardMedia
@@ -36,18 +44,17 @@ class  Homepage extends Component {
       >
         <img src="https://i.imgur.com/Bk0J8FM.jpg" alt="" />
       </CardMedia>
-      <CardTitle title="Card title" subtitle="Card subtitle" />
+      <CardTitle title="Parent Name"  />
       <CardText>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
-        Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
-        Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
+        
       </CardText>
       <CardActions>
-        <FlatButton label="Action1" />
-        <FlatButton label="Action2" />
-        <FlatButton label="Action1" />
-        <FlatButton label="Action2" />
+        <FlatButton label="Create Chore" link='/'/>
+        <FlatButton label="Add/Delete/Update Child" />
+        <FlatButton label="Edit Chores " />
+        
       </CardActions>
     </Card>
             </div>
