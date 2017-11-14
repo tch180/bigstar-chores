@@ -4,8 +4,10 @@ import FlatButton from 'material-ui/FlatButton';
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
+// import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import Navbar from '../components/Navbar'
 import styled from 'styled-components'
+
 
 const Homepagestyle = styled.div`
 padding: 50px 15px 15px 0px
@@ -31,9 +33,11 @@ div {
 class  Homepage extends Component {
     render() {
         return (
+            <div>
+            {/* <Navbar/> */}
             <Homepagestyle>
                 <div>
-                    <MuiThemeProvider muiTheme={getMuiTheme()}>
+                    <MuiThemeProvider>
                 <div>
     <Card>
       <CardHeader
@@ -63,6 +67,7 @@ class  Homepage extends Component {
             </MuiThemeProvider>
             </div>
             </Homepagestyle>
+            </div>
         );
     }
 }
