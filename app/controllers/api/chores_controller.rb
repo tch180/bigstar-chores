@@ -3,3 +3,4 @@ class Api::ChoresController < ApplicationController
         @chores =Chore.all
         render json: @chores
     end
+end
