@@ -34,7 +34,7 @@ class  Homepage extends Component {
     render() {
         return (
             <div>
-            {/* <Navbar/> */}
+            {/* <Navbar/>  */}
             <Homepagestyle>
                 <div>
                     <MuiThemeProvider>

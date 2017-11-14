@@ -1,4 +1,4 @@
-class ParentsController < ApplicationController
+class Api::ParentsController < ApplicationController
     def index
         @parents = Parent.all
         render json: @parents
