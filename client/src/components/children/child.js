@@ -20,11 +20,10 @@ class Child extends Component {
     }
     
 async componentWillMount() {
-    try {
+    try{
         const res = await axios.get(`/api/children`)
         this.setState({children: res.data})
         console.log(this.state.children)
-        
     }catch (error){
         console.log(error)
     }
@@ -43,6 +42,7 @@ iconClassNameRight="muidocs-icon-navigation-expand-more"/>
 <div>
     {this.state.children.map((child, index)=>{
         return (
+            
             <ChildContainer key={index}>
             <h2>Child Name </h2>
             </ChildContainer>
