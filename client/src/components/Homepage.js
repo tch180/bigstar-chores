@@ -57,10 +57,12 @@ class  Homepage extends Component {
         
       </CardText>
       <CardActions>
-        <FlatButton label="Create Chore" />
+        <Link to='/chore'>
+        <FlatButton label="Create Chore"  />
+        </Link>
+
         <FlatButton label="Add/Delete/Update Child" />
         <FlatButton label="Edit Chores " />
-        
       </CardActions>
     </Card>
             </div>

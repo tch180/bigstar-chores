@@ -1,15 +1,15 @@
-class ChildrenController < ApplicationController
+class Api::ChildrenController < ApplicationController
    
     def index
-        @child = Child.all
-        render json: @child
+        @children = Child.all
+        render json: @children
     end
     
 
     def create
 
     end
-    def delete
+    def show
         
     end
      

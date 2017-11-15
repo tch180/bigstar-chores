@@ -12,16 +12,12 @@ background: grey;
 
 
 class Parents extends Component {
-
     state = {
         parents: []
     }
     ///////////////
     //gets the parent info 
     ///////////////
-    
-    
-    
     async componentWillMount() {
         try{
             const res = await axios.get(`/api/parents`)

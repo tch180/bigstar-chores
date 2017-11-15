@@ -5,10 +5,11 @@ class Api::ParentsController < ApplicationController
         
     end
     def show 
-        @parents = Parent.find(params[:chores_id])
+        @parents = Chore.includes(:parent_id).order('chore.create_at Desc').find(params[:chores.id])
+        
         render json: @chores
         render json: @parents
-        # render json: @child
+         render json: @child
     end
     def create
         @parents = Child.new(child_params)

@@ -36,23 +36,25 @@ async componentWillMount() {
 
     render() {
         return (
-            <div>
+        <div> 
 <AppBar title="Children"
 iconClassNameRight="muidocs-icon-navigation-expand-more"/>         
 <div>
     {this.state.children.map((child, index)=>{
         return (
-            
+
             <ChildContainer key={index}>
-            <h2>Child Name </h2>
+            <h2>Name: {child.name}</h2>
+            <h3>Chores </h3>
             </ChildContainer>
         )
     })}
 
 
 
-</div>
+    </div>
    </div>
+   
         );
     }
 }
