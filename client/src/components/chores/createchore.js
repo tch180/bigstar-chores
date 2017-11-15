@@ -56,6 +56,7 @@ TableBody,
   class CreateChore extends Component {
       
       state = {
+      chores:[],
     fixedHeader: true,
     selectable: true,
     deselectOnClickaway: true,
@@ -72,10 +73,16 @@ TableBody,
 
   getChoreInfo = async () => {
       try {
-       const res = await axios.get(`/api/chores`)       
+       const res = await axios.get(`/api/chores`) 
+       this.setState({chores: res.data}) 
+       console.log(this.state.chores)    
       }catch (error){
         console.log(error)
       }
+  }
+  
+  componentWillMount() {
+    this.getChoreInfo()
   }
   
       
@@ -114,7 +121,7 @@ TableBody,
             showRowHover={this.state.showRowHover}
             stripedRows={this.state.stripedRows}
           >
-            {tableData.map( (row, index) => (
+            {this.props.chores.map( (choresdssdfsdf, index) => (
               <TableRow key={index}>
                 <TableRowColumn>{index}</TableRowColumn>
                 <TableRowColumn>{row.name}</TableRowColumn>
