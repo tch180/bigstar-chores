@@ -19,18 +19,12 @@ async componentWillMount() {
   try {
     const parent_id = 1
     const res = await axios.get(`/api/parents/${parent_id}/chores`)
-    
     this.setState({chores: res.data})
     console.log(this.state.chores)
   }catch (error){
     console.log(error)
   }
 }
-
-
-
-
-
       handleOpen = () => {
         this.setState({open: true});
       };
@@ -51,7 +45,7 @@ async componentWillMount() {
           ];
         return (
           <div>
-              <h1>chorse:{this.state.chores.name}</h1>
+            
             
             <div>
         <RaisedButton label="Create a new Chore " onClick={this.handleOpen} />
@@ -66,7 +60,7 @@ async componentWillMount() {
           
           <DatePicker hintText="Date Picker" />
         </Dialog>
-        <CreateChore/>
+        <CreateChore chores={this.state.chores}/>
       </div>
       </div>
         );
