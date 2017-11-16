@@ -14,6 +14,7 @@ import Chores from './components/chores/chores'
 import Homepage from './components/Homepage'
 import Parents from './components/parents/Parents'
 import Child from './components/children/child'
+import newParent from './components/parents/newParent'
 import './App.css';
 
 class App extends Component {
@@ -26,6 +27,7 @@ class App extends Component {
         <Switch>
           <Route exact path='/' component={Homepage}/>
           <Route exact path= '/parents' component={Parents}/>
+          <Route exact path='/parents/newParent' component={newParent}/>
           <Route exact path='/chores' component={Chores}/>
           <Route exact path='/child' component={Child}/>
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import AppBar from 'material-ui/AppBar';
 import styled from 'styled-components'
-import axios from 'axios'
+import axios from 'axios';
 
 
 const Childrenstyle = styled.div`

@@ -20,13 +20,6 @@ const ChoreTable = (props) => (
             <TableRowColumn></TableRowColumn>
         </TableRow>)
         })}
-    
-        
-      {/* <TableRow>
-        <TableRowColumn></TableRowColumn>
-        <TableRowColumn> </TableRowColumn>
-        <TableRowColumn></TableRowColumn>
-      </TableRow> */}
     </TableBody>
   </Table>
 );

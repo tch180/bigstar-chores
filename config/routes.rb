@@ -3,12 +3,7 @@ Rails.application.routes.draw do
 
     resources :parents, only: [:index, :show, :create] do
     end
-      #  resources :child, only: [:index, :create, :show] do 
-
-        
-        
-          
-       
+      
     end
     namespace :api do 
       resources :chores, only: [:index, :show, :create, :destroy] do

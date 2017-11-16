@@ -12,9 +12,13 @@ class Api::ParentsController < ApplicationController
          render json: @child
     end
     def create
-        @parents = Child.new(child_params)
-        @parents.update!(child_id: params[:child_id])
-        @parents = Chore.includes(:child).order('chore.create_at Desc').find(params[:child_id])
+        @parents = Parent.create!(parent_params)
+        # @parents.update!(parent_id: params[:parent_id])
+        # @parents = Chore.includes(:child).order('chore.create_at Desc').find(params[:child_id])
+        render json: Parent.all
+    end
+    def parent_params 
+        params.require(:parents).permit(:name)
     end
 end
 

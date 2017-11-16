@@ -9,6 +9,7 @@ import ChoreTable from './choretable'
 
 
 
+
 const styles = {
   propContainer: {
     width: 200,
@@ -28,18 +29,13 @@ class CreateChore extends Component {
       name: "",
       points: "",
     },
-    newChore:{
-      name: "",
-      points: "",
-      parentId:"",
-      childId: "",
-    },
+    
 
-    fixedHeader: true,
-    selectable: true,
-    deselectOnClickaway: true,
-    showCheckboxes: true,
-    height: "300px"
+    // fixedHeader: true,
+    // selectable: true,
+    // deselectOnClickaway: true,
+    // showCheckboxes: true,
+    // height: "300px"
   };
 
   handleToggle = (event, toggled) => {
@@ -58,11 +54,7 @@ class CreateChore extends Component {
     }
   };
 
-// getChildInfo = async ()=> {
-//   const  childId = 1
-//   const childId= axios.get(`/api/child/${child_id}`)
-  
-// }
+
 
 handleSubmit = async (event) => {
   event.preventDefault()
@@ -88,27 +80,8 @@ handleChange = (event) => {
       
       <div>
         <div>
-          <ChoreTable chores={this.props.chores}/>
-          <form onSubmit={this.handleSubmit}>
-                        <h2>New Chore</h2>
-                        <input
-                            placeholder='Chore Name'
-                            onChange={this.handleChange}
-                            name="name"
-                            type="text"
-                            required
-                            value={this.props.chores.name} />
-                        <input
-                            placeholder='Points'
-                            onChange={this.handleChange}
-                            name="points"
-                            type="text"
-                            required
-                            value={this.props.chores.points} />
-                        <div>
-                            <button>Create Chore</button>
-                        </div>
-          </form>
+          <ChoreTable chores={this.state.chores}/>
+         
       </div>
       </div>
     );
