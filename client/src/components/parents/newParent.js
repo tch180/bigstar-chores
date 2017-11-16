@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import AppBar from "material-ui/AppBar";
 import axios from 'axios';
 import {Redirect} from 'react-router-dom';
 
@@ -27,7 +28,7 @@ class newParent extends Component {
 
     render() {
         if (this.state.redirectToHome) {
-            return <Redirect to={'/'}/>
+            return <Redirect to={'/parents'}/>
         }
         return (
             <div>

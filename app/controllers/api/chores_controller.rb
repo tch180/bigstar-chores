@@ -1,7 +1,16 @@
 class Api::ChoresController < ApplicationController
     def index
+
         @chores = Chore.all
-        # @chores = Parent.find(params[:chore_id]).chores
+        # @parent = Parent.find_by_id(params[:parent_id])
+        # @chores = @parent.chores
+        # chores_response = @chores.map do |parent|
+        #   {
+        #     parent: chores.parent,
+        #     parent: parent
+        #   } 
+        # end
+       
         render json: @chores
       end
       
@@ -14,7 +23,7 @@ class Api::ChoresController < ApplicationController
     
       def show
         @chores = Chore.all
-    
+        render json: @chores
       end
     
       

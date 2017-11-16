@@ -1,51 +1,59 @@
 import React, { Component } from 'react';
-import AppBar from 'material-ui/AppBar';
-import styled from 'styled-components'
 import axios from 'axios';
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
+import AppBar from 'material-ui/AppBar';
 import FlatButton from 'material-ui/FlatButton';
-import {Link} from 'react-router-dom'
+import {Link, Redirect} from 'react-router-dom'
+import styled from 'styled-components'
 
-const Childrenstyle = styled.div`
-background: green;
-`
+
+
+
 const ChildContainer = styled.div`
 background: grey;
 `
 
+class choresview extends Component {
 
-
-class Child extends Component {
     state = {
-      children:[],
-      chores:[],
-        
+        chores: [],
+        redirectToHome: false,
     }
-    
-async componentWillMount() {
-    try{
-        const res = await axios.get(`/api/children`)
-        this.setState({children: res.data})
-        console.log(this.state)
-    }catch (error){
-        console.log(error)
+
+
+    async componentWillMount() {
+        try {
+            const { parentid }= this.props.match.params
+            console.log(parentid)
+            const res = await axios.get(`/api/parents/${parentid}/chores`) 
+        console.log(res)
+            this.setState({ chores: res.data})
+          }catch (error){
+    console.log(error)
+        }
     }
-}
+
+
+
     render() {
+        if (this.state.redirectToHome) {
+            return <Redirect to={'/parents'}/>}
         return (
-        <div> 
+            <div> 
 <AppBar title="BigStar Chores"
 iconClassNameRight="muidocs-icon-navigation-expand-more"/>         
 <div>
-    {this.state.children.map((relationship, index)=>{
-        return (
+    {this.state.chores.map((chores, index)=>{
+        return ( 
+            
 
             <ChildContainer key={index}  >
            <Card >
+               
            <CardHeader
            
-             title={relationship.child.name}
-             subtitle={relationship.parent.name}
+             title={chores.name}
+             subtitle={chores.points}
              actAsExpander={true}
              showExpandableButton={true}/>
              
@@ -53,7 +61,7 @@ iconClassNameRight="muidocs-icon-navigation-expand-more"/>
                <Link to='/chores'>   
              <FlatButton label="Chores" />
              </Link>
-             <FlatButton label="rewards" />
+             <FlatButton label="completed" />
            </CardActions>
            <CardText expandable={true}>      
            </CardText>
@@ -68,4 +76,4 @@ iconClassNameRight="muidocs-icon-navigation-expand-more"/>
     }
 }
 
-export default Child;
+export default choresview;

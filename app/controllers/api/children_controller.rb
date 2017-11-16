@@ -11,6 +11,13 @@ class Api::ChildrenController < ApplicationController
     end
     def show
         
+        @children = Child.joins(:parent).includes(:parent).find_by_id(params[:id])
+        child_response = {
+            parent_name: @children.parent.name,
+            child_name: @children.name
+        }
+        render json: child_response
+        # render json: @children, include: [:parents]
     end
      
 end

@@ -1,18 +1,31 @@
 import React, { Component } from 'react';
 import {Table,TableBody,TableHeader,TableHeaderColumn, TableRow,TableRowColumn, } from 'material-ui/Table';
-
 import FlatButton from 'material-ui/FlatButton';
-
-
 import axios from 'axios'
 import ChoreTable from '../chores/choretable'
+import AppBar from "material-ui/AppBar";
 
 
 class componentName extends Component {
   state = {
-    chores:[]
+    chores:[],
+    multiSelectable: true,
+    
   }
 
+  handleChoreAssign = async (event)=> {
+
+  }
+
+
+
+  handleChange = async (event) => {
+    const updateParent = {
+        ...this.state.parent
+    }
+    updateParent[event.target.name] = event.target.value
+    this.setState({parent: updateParent})
+ }
 
   async componentWillMount () {
   try{
@@ -27,12 +40,14 @@ class componentName extends Component {
   render() {
     return (
       <div>
-        <Table>
+      <AppBar title="BigStar Chores" iconClassNameRight="muidocs-icon-navigation-expand-more"/>
+      <div>
+  <Table multiSelectable={this.state.multiSelectable}>
     <TableHeader>
       <TableRow>
-        <TableHeaderColumn>ID</TableHeaderColumn>
+        <TableHeaderColumn>Name</TableHeaderColumn>
         <TableHeaderColumn>Points</TableHeaderColumn>
-        <TableHeaderColumn>Status</TableHeaderColumn>
+        <TableHeaderColumn>Completed</TableHeaderColumn>
       </TableRow>
     </TableHeader>
     <TableBody>
@@ -41,12 +56,18 @@ class componentName extends Component {
             <TableRow key={index}>
                 <TableRowColumn>{chore.name}</TableRowColumn>
             <TableRowColumn>{chore.points}</TableRowColumn>
-            <TableRowColumn></TableRowColumn>
+            <TableRowColumn>{chore.parent_id} - {chore.child_id}</TableRowColumn>
         </TableRow>)
         })}
     </TableBody>
   </Table>
- 
+ <div>
+<FlatButton>
+Assign Chores
+ </FlatButton>
+   </div>
+
+      </div>
       </div>
     );
   }

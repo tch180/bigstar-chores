@@ -66,12 +66,13 @@ class Parents extends Component {
                   mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
                 </CardText>
                 <CardActions>
-                  <Link to="/chores">
+                  <Link to={`/parents/${parent.id}/chores`}>
                     <FlatButton label="View Chores" />
                   </Link>
-
+                  <Link to='/child'>
                   <FlatButton label="Add/Delete/Update Child" />
-                  <FlatButton label="Assign Chores " />
+                  </Link>
+                 
                 </CardActions>
               </Card>
             );

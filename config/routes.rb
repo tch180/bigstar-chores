@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   namespace :api do
 
-    resources :parents, only: [:index, :show, :create] do
-    end
+    resources :parents, only: [:index, :show, :create, :destroy] do
+      resources :chores, only: [:index, :show, :create, :destroy] do
+         end
+        end
       
     end
     namespace :api do 
