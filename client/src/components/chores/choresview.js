@@ -23,9 +23,8 @@ class choresview extends Component {
 
     async componentWillMount() {
         try {
-            const { parentid }= this.props.match.params
-            console.log(parentid)
-            const res = await axios.get(`/api/parents/${parentid}/chores`) 
+            const parentid = this.props.match.params.parentid
+            const res = await axios.get(`/api/parents/${parentid}/chorespecial`) 
         console.log(res)
             this.setState({ chores: res.data})
           }catch (error){

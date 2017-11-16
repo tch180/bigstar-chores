@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   namespace :api do
 
     resources :parents, only: [:index, :show, :create, :destroy] do
+      get 'chorespecial', to: 'chores#special' 
       resources :chores, only: [:index, :show, :create, :destroy] do
+        
          end
         end
       
