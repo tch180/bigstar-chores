@@ -38,14 +38,15 @@ async componentWillMount() {
 iconClassNameRight="muidocs-icon-navigation-expand-more"/>         
 <div>
     {this.state.children.map((relationship, index)=>{
+
         return (
 
-            <ChildContainer key={index}  >
-           <Card >
+            <ChildContainer>
+           <Card key={index}>
            <CardHeader
            
-             title={relationship.child.name}
-             subtitle={relationship.parent.name}
+             title={relationship.name}
+             subtitle={relationship.parent}
              actAsExpander={true}
              showExpandableButton={true}/>
              

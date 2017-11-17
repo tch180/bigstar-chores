@@ -7,8 +7,11 @@ class Api::ChildrenController < ApplicationController
     
 
     def create
-
+          @children = Child.create!(child_params)
+          render json: Child.all
     end
+
+
     def show
         
         @children = Child.joins(:parent).includes(:parent).find_by_id(params[:id])

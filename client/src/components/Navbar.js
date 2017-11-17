@@ -71,7 +71,6 @@ class Navbar extends Component {
             <h1>BigStar Chores</h1>
             <Navstyle>
             <div>
-                <MuiThemeProvider muiTheme={getMuiTheme()}>
                 <div>    
                      <RaisedButton
                        onClick={this.handleTouchTap}
@@ -92,7 +91,6 @@ class Navbar extends Component {
                        </Menu>
                      </Popover>
                    </div>
-                   </MuiThemeProvider>
 
                 </div>
                 </Navstyle>

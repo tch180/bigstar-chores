@@ -2,16 +2,13 @@ import React, { Component } from "react";
 import AppBar from "material-ui/AppBar";
 import styled from "styled-components";
 import axios from "axios";
-import {
-  Card,
-  CardActions,
-  CardHeader,
-  CardMedia,
-  CardTitle,
-  CardText
-} from "material-ui/Card";
+import {Card,CardActions,CardHeader, CardMedia, CardTitle, CardText} from "material-ui/Card";
 import FlatButton from "material-ui/FlatButton";
 import { Link } from "react-router-dom";
+import newparent from '../parents/parents'
+
+
+
 
 const Parentstyle = styled.div`background: green;`;
 const ParentContainer = styled.div`background: grey;`;
@@ -23,6 +20,7 @@ class Parents extends Component {
   ///////////////
   //gets the parent info
   ///////////////
+
   async componentWillMount() {
     try {
       const res = await axios.get(`/api/parents`);
@@ -33,14 +31,28 @@ class Parents extends Component {
     }
   }
  
+  ///////////////
+  //Delete parent
+  ///////////////
+  deleteParent = async (e) => {
+    e.preventDefault()
+    const parentId = this.props.history.location.state.id
+    const res = await axios.delete(`/api/parents/${parentId}`)
+    console.log('hello from delete parent ')
+    const parent = res.data
+    this.setState({parent: parents})
+}
+
 
   render() {
     return (
       <div>
+  
         <AppBar
           title="Parents"
           iconClassNameRight="muidocs-icon-navigation-expand-more"
-        />
+          
+          />
         <div>
           {this.state.parents.map((parent, index) => {
             return (
@@ -72,6 +84,11 @@ class Parents extends Component {
                   <Link to='/child'>
                   <FlatButton label="Add/Delete/Update Child" />
                   </Link>
+                  
+                  <FlatButton label="Delete Parent"
+                    onChange={deleteParent}
+                  />
+                  
                  
                 </CardActions>
               </Card>

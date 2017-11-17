@@ -20,6 +20,8 @@ class newParent extends Component {
        updateParent[event.target.name] = event.target.value
        this.setState({parent: updateParent})
     }
+
+    
     handleSubmit = async (event) => {
         event.preventDefault()
         await axios.post(`/api/parents/`, { parents: this.state.parent})

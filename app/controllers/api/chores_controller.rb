@@ -30,6 +30,11 @@ class Api::ChoresController < ApplicationController
         render json: @chores
       end
     
+      def assignchore
+        @parent = Parent.find(params[:parent_id])
+        @parent.chores.create(chores_params)
+
+      end
       
     
       def edit
@@ -38,7 +43,7 @@ class Api::ChoresController < ApplicationController
 
     private 
     def chores_params
-      params.require(:chore).permit(:name, :points, :childId)
+      params.require(:chore).permit(:name, :points, :childId).merge(child_id: @child.id)
     end
       
 end

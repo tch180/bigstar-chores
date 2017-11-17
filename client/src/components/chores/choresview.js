@@ -32,6 +32,9 @@ class choresview extends Component {
         }
     }
 
+    // handleChoresupdate = async 
+
+
 
 
     render() {

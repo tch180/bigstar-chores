@@ -1,12 +1,11 @@
-
-
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
-// import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import MuiThemeProvider from "material-ui/styles/MuiThemeProvider"; import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import Navbar from "../components/Navbar";
 import styled from "styled-components";
 import AppBar from "material-ui/AppBar";
+
+
 
 const Homepagestyle = styled.div`
 padding: 50px 15px 15px 0px
@@ -35,9 +34,9 @@ class Homepage extends Component {
     return (
       <div>
         <div>
-          <AppBar
-            title="BigStar Chores"
-            iconClassNameRight="muidocs-icon-navigation-expand-more"/>
+          {/* <MuiThemeProvider>
+          <Navbar/>
+          </MuiThemeProvider> */}
         </div>
        
       <div/>

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
     resources :parents, only: [:index, :show, :create, :destroy] do
       get 'chorespecial', to: 'chores#special' 
+      get 'choresadd', to: 'chores#assignchore'
       resources :chores, only: [:index, :show, :create, :destroy] do
         
          end
