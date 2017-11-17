@@ -11,8 +11,8 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 ///////////////
 import Navbar from './components/Navbar'
 import Homepage from './components/Homepage'
-import parents from './components/parents/parents'
-import newparent from './components/parents/newparent'
+import Parents from './components/parents/Parents'
+import newParent from './components/parents/newParent'
 import Child from './components/children/child'
 import newchild from './components/children/newchild'
 import choresview from './components/chores/choresview'
@@ -33,8 +33,8 @@ class App extends Component {
 
 
           <Route exact path='/' component={Homepage}/>
-          <Route exact path= '/parents' component={parents}/>
-          <Route exact path='/parents/newparent' component={newparent}/>
+          <Route exact path= '/Parents' component={Parents}/>
+          <Route exact path='/parents/newParent' component={newParent}/>
           <Route exact path='/parents/newchild'component={newchild}/>          
           <Route exact path='/parents/:parentid/chores' component={choresview}/>
           <Route exact path='/parents/:parentid/assign' component={Chores}/>
