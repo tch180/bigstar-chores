@@ -1,24 +1,15 @@
-# README
+# BigStar Chores 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Trello:
+https://trello.com/b/YeTk95rY/bigstar-chores
 
-Things you may want to cover:
+GitHub
+https://github.com/tch180/bigstar-chores
 
-* Ruby version
+Lucid Charts erd and wireframs 
+wireframes
+https://www.lucidchart.com/documents/edit/a74d2ddb-eb89-448a-a2eb-b027580a7498
 
-* System dependencies
+erd
+https://www.lucidchart.com/documents/edit/a7128c12-259e-4cf5-a3f4-53356b425bfe#
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

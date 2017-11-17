@@ -11,8 +11,8 @@ import { Link } from "react-router-dom";
 
 
 const Navstyle = styled.div`
-background-color: black;
-height: 3vw;
+background-color: darkblue;
+height: 5vw;
 color: white;
 text-transform: uppercase;
 font-weight: 400;
@@ -72,7 +72,9 @@ class Navbar extends Component {
            
             
             <div>
+            <Navstyle>
                 <div>    
+                <h1>BigStar Chores</h1>
                      <RaisedButton
                        onClick={this.handleTouchTap}
                        label="Menu"
@@ -98,12 +100,12 @@ class Navbar extends Component {
                        </Menu>
                      </Popover>
                    </div>
+                   </Navstyle>
 
                 </div>
-          
             </div>
             <div>
-                            <Homepage/>
+                            {/* <Homepage/> */}
                             </div>
             
         </div>

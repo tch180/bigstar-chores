@@ -4,6 +4,7 @@ import FlatButton from 'material-ui/FlatButton';
 import axios from 'axios'
 import ChoreTable from '../chores/choretable'
 import AppBar from "material-ui/AppBar";
+import Navbar from '../Navbar'
 
 
 class componentName extends Component {
@@ -44,7 +45,7 @@ class componentName extends Component {
   render() {
     return (
       <div>
-      <AppBar title="BigStar Chores" iconClassNameRight="muidocs-icon-navigation-expand-more"/>
+      <Navbar/>
       <div>
   <Table multiSelectable={this.state.multiSelectable}>
     <TableHeader>

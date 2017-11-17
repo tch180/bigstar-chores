@@ -5,6 +5,9 @@ import axios from 'axios';
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 import {Link} from 'react-router-dom'
+import Navbar from '../Navbar'
+
+
 
 const Childrenstyle = styled.div`
 background: green;
@@ -34,8 +37,7 @@ async componentWillMount() {
     render() {
         return (
         <div> 
-<AppBar title="BigStar Chores"
-iconClassNameRight="muidocs-icon-navigation-expand-more"/>         
+ <Navbar/>        
 <div>
     {this.state.children.map((relationship, index)=>{
 
@@ -58,6 +60,7 @@ iconClassNameRight="muidocs-icon-navigation-expand-more"/>
            </CardActions>
            <CardText expandable={true}>      
            </CardText>
+          
          </Card>
             </ChildContainer>
         )

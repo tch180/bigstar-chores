@@ -5,7 +5,6 @@ import axios from "axios";
 import {Card,CardActions,CardHeader, CardMedia, CardTitle, CardText} from "material-ui/Card";
 import FlatButton from "material-ui/FlatButton";
 import { Link } from "react-router-dom";
-import newparent from '../parents/newParent'
 import Newchild from '../children/newchild'
 import Navbar from '../Navbar'
 
@@ -88,7 +87,7 @@ componentWillMount() {
                     <FlatButton label="View Chores" />
                   </Link>
                   <Link to='/child'>
-                  <FlatButton label="Add/Delete/Update Child" />
+                  <FlatButton label="View children & assign Chores" />
                   </Link>
                   <Newchild/>
                   
@@ -96,7 +95,7 @@ componentWillMount() {
                     onClick={() => this.deleteParent(parent.id)}
                   />
                   
-                 
+              
                 </CardActions>
               </Card>
             );
