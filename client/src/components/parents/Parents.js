@@ -77,10 +77,12 @@ componentWillMount() {
                   <img src="https://i.imgur.com/03PI7RD.jpg" alt="" />
                 </CardMedia>
                 <CardTitle title={parent.name} />
+
                 <CardText>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
                   mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
                 </CardText>
+                
                 <CardActions>
                   <Link to={`/parents/${parent.id}/chores`}>
                     <FlatButton label="View Chores" />
