@@ -15,6 +15,10 @@ class Api::ParentsController < ApplicationController
          render json: @child
     end
 
+def destroy
+    @parents = Parent.find(params[:id]).destroy
+
+end
 
 
 

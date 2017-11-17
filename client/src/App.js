@@ -28,8 +28,9 @@ class App extends Component {
       <Router>
 
       <div>
-
+      {/* <Navbar/> */}
         <Switch>
+
 
           <Route exact path='/' component={Homepage}/>
           <Route exact path= '/parents' component={parents}/>

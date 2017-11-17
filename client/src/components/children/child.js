@@ -26,7 +26,7 @@ async componentWillMount() {
     try{
         const res = await axios.get(`/api/children`)
         this.setState({children: res.data})
-        console.log(this.state)
+        console.log(res.data)
     }catch (error){
         console.log(error)
     }

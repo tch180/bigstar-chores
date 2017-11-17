@@ -7,6 +7,7 @@ import MenuItem from 'material-ui/MenuItem';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import Homepage from '../components/Homepage';
+import { Link } from "react-router-dom";
 
 
 const Navstyle = styled.div`
@@ -68,13 +69,13 @@ class Navbar extends Component {
             
                
             <div>
-            <h1>BigStar Chores</h1>
-            <Navstyle>
+           
+            
             <div>
                 <div>    
                      <RaisedButton
                        onClick={this.handleTouchTap}
-                       label="Home"
+                       label="Menu"
                      /> 
                      <Popover
                        open={this.state.open}
@@ -84,16 +85,22 @@ class Navbar extends Component {
                        onRequestClose={this.handleRequestClose}
                      >
                        <Menu>
-                         <MenuItem primaryText="Parent" Link="./components/parents"/>
-                         <MenuItem primaryText="Children &amp; Chores" />
-                         <MenuItem primaryText="Chores &amp; Points" />
+                         <Link to="/parents">
+                         <MenuItem primaryText="Parent" />
+                         </Link>
+                         <Link to="/child">
+                         <MenuItem primaryText="Children" />
+                         </Link>
+                         <Link to="/chores">
+                         <MenuItem primaryText="Chores" />
+                         </Link>
                          <MenuItem primaryText="Rewards" />
                        </Menu>
                      </Popover>
                    </div>
 
                 </div>
-                </Navstyle>
+          
             </div>
             <div>
                             <Homepage/>

@@ -6,8 +6,8 @@ import {Card,CardActions,CardHeader, CardMedia, CardTitle, CardText} from "mater
 import FlatButton from "material-ui/FlatButton";
 import { Link } from "react-router-dom";
 import newparent from '../parents/parents'
-
-
+import Newchild from '../children/newchild'
+import Navbar from '../Navbar'
 
 
 const Parentstyle = styled.div`background: green;`;
@@ -15,14 +15,19 @@ const ParentContainer = styled.div`background: grey;`;
 
 class Parents extends Component {
   state = {
-    parents: []
+    parents: [],
+  
   };
   ///////////////
   //gets the parent info
   ///////////////
 
-  async componentWillMount() {
+componentWillMount() {
+    this.getAllParents()
+  }
+  getAllParents = async () => {
     try {
+      console.log('TRYING')
       const res = await axios.get(`/api/parents`);
       this.setState({ parents: res.data });
       console.log(this.state.parents);
@@ -34,25 +39,24 @@ class Parents extends Component {
   ///////////////
   //Delete parent
   ///////////////
-  deleteParent = async (e) => {
-    e.preventDefault()
-    const parentId = this.props.history.location.state.id
-    const res = await axios.delete(`/api/parents/${parentId}`)
-    console.log('hello from delete parent ')
-    const parent = res.data
-    this.setState({parent: parents})
-}
-
+  async deleteParent (id) {
+    try {
+      const res = await axios.delete(`/api/parents/${id}`)
+      this.getAllParents()
+    }catch (error) {
+      console.log(error)
+    }
+  }
 
   render() {
     return (
       <div>
   
-        <AppBar
-          title="Parents"
-          iconClassNameRight="muidocs-icon-navigation-expand-more"
+        
+          <Navbar/>
+        
+   
           
-          />
         <div>
           {this.state.parents.map((parent, index) => {
             return (
@@ -84,9 +88,10 @@ class Parents extends Component {
                   <Link to='/child'>
                   <FlatButton label="Add/Delete/Update Child" />
                   </Link>
+                  <Newchild/>
                   
                   <FlatButton label="Delete Parent"
-                    onChange={deleteParent}
+                    onClick={() => this.deleteParent(parent.id)}
                   />
                   
                  

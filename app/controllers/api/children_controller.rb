@@ -22,5 +22,8 @@ class Api::ChildrenController < ApplicationController
         render json: child_response
         # render json: @children, include: [:parents]
     end
+    def child_params
+        params.require(:child).permit(:name)
+    end
      
 end

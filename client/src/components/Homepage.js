@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import MuiThemeProvider from "material-ui/styles/MuiThemeProvider"; import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import MuiThemeProvider from "material-ui/styles/MuiThemeProvider"; 
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import Navbar from "../components/Navbar";
 import styled from "styled-components";
 import AppBar from "material-ui/AppBar";
@@ -34,9 +35,7 @@ class Homepage extends Component {
     return (
       <div>
         <div>
-          {/* <MuiThemeProvider>
-          <Navbar/>
-          </MuiThemeProvider> */}
+
         </div>
        
       <div/>
