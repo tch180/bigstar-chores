@@ -36,7 +36,8 @@ class App extends Component {
           <Route exact path= '/Parents' component={Parents}/>
           <Route exact path='/parents/newParent' component={newParent}/>
           <Route exact path='/parents/newchild'component={newchild}/>          
-          <Route exact path='/parents/:parentid/chores' component={choresview}/>
+          <Route exact path='/parents/:parentid/chores' component={Chores}/>
+          {/* {choresview}/> */}
           <Route exact path='/parents/:parentid/assign' component={Chores}/>
           <Route exact path='/chores' component={Chores}/>
           <Route exact path='/child' component={Child}/>

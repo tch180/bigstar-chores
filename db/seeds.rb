@@ -17,3 +17,8 @@ Chore.create({
             points: 20, name: "make  bed"})
 Chore.create({
                 points: 50, name: "Unload Dish Washer"})
+
+
+  Parent.create({name: "Obama"}) 
+  
+#   Child.create({name: "Michelle", parent_id: 0 })
