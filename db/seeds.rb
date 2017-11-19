@@ -10,5 +10,10 @@
 Chore.create({
     points: 50, name: "pull weeds"})
 
+Chore.create({
+        points: 30, name: "take out trash"})
 
-    
+ Chore.create({
+            points: 20, name: "make  bed"})
+Chore.create({
+                points: 50, name: "Unload Dish Washer"})
