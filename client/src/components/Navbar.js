@@ -87,6 +87,9 @@ class Navbar extends Component {
                        onRequestClose={this.handleRequestClose}
                      >
                        <Menu>
+                          <Link to="/">
+                       <MenuItem primaryText="Homepage" />
+                          </Link>
                          <Link to="/parents">
                          <MenuItem primaryText="Parent" />
                          </Link>
