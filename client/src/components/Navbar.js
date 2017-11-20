@@ -12,7 +12,12 @@ import { Link } from "react-router-dom";
 
 const Navstyle = styled.div`
 background-color: darkblue;
-height: 5vw;
+background-image: url("https://i.imgur.com/tiho3XF.jpg");
+background-repeat: no-repeat;
+background-position: center; 
+background-size:cover;
+
+/* background-size: 1600px 300px; */
 color: white;
 text-transform: uppercase;
 font-weight: 400;
