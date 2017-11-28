@@ -17,6 +17,7 @@ import Child from './components/children/child'
 import newchild from './components/children/newchild'
 import choresview from './components/chores/choresview'
 import Chores from './components/chores/chores'
+import addchores from './components/chores/addchores'
 
 import './App.css';
 
@@ -41,6 +42,7 @@ class App extends Component {
           <Route exact path='/parents/:parentid/assign' component={Chores}/>
           <Route exact path='/chores' component={Chores}/>
           <Route exact path='/child' component={Child}/>
+          <Route exact path='/addchores' component={addchores}/>
 
         </Switch>
 

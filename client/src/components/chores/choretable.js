@@ -17,7 +17,7 @@ const ChoreTable = (props) => (
             <TableRow>
                 <TableRowColumn>{chore.name}</TableRowColumn>
             <TableRowColumn>{chore.points}</TableRowColumn>
-            <TableRowColumn></TableRowColumn>
+            <TableRowColumn>{chore._id}</TableRowColumn>
         </TableRow>)
         })}
     </TableBody>

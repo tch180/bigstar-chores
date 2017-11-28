@@ -1,5 +1,14 @@
 # BigStar Chores 
 
+Welcome to Bigstar Chores, 
+    I built this application because as a parent with children, it can be difficult to manage chores. A parent can add a child/ren and assign them chores from a list of chores. 
+
+
+
+
+
+
+
 Trello:
 https://trello.com/b/YeTk95rY/bigstar-chores
 

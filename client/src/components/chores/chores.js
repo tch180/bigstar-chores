@@ -5,7 +5,7 @@ import axios from 'axios'
 import ChoreTable from '../chores/choretable'
 import AppBar from "material-ui/AppBar";
 import Navbar from '../Navbar'
-
+import AddChores from './addchores'
 
 class componentName extends Component {
   state = {
@@ -67,11 +67,12 @@ class componentName extends Component {
     </TableBody>
   </Table>
  <div>
-<FlatButton onClick={this.handleChoreAssign} 
+{/* <FlatButton onClick={this.handleChoreAssign} 
 >
 Assign Chores
- </FlatButton>
+ </FlatButton> */}
       </div>
+      <FlatButton><AddChores/></FlatButton>
       </div>
       </div>
     );

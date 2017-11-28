@@ -14,6 +14,7 @@ background: green;
 `
 const ChildContainer = styled.div`
 background: grey;
+
 `
 
 
@@ -46,11 +47,9 @@ async componentWillMount() {
             <ChildContainer>
            <Card key={index}>
            <CardHeader
-           
              title={relationship.name}
              subtitle={relationship.parent}
-             actAsExpander={true}
-             showExpandableButton={true}/>
+           />
              
            <CardActions>
                <Link to='/chores'>   
@@ -58,7 +57,7 @@ async componentWillMount() {
              </Link>
              <FlatButton label="rewards" />
            </CardActions>
-           <CardText expandable={true}>      
+           <CardText expandable={false}>      
            </CardText>
           
          </Card>

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import AppBar from "material-ui/AppBar";
+// import AppBar from "material-ui/AppBar";
 import styled from "styled-components";
 import axios from "axios";
 import {Card,CardActions,CardHeader, CardMedia, CardTitle, CardText} from "material-ui/Card";
@@ -9,8 +9,13 @@ import Newchild from '../children/newchild'
 import Navbar from '../Navbar'
 
 
-const Parentstyle = styled.div`background: green;`;
-const ParentContainer = styled.div`background: grey;`;
+const Parentstyle = styled.div`background: green;
+
+
+`
+const ParentContainer = styled.div`background: grey;
+
+`
 
 class Parents extends Component {
   state = {
@@ -50,13 +55,8 @@ componentWillMount() {
   render() {
     return (
       <div>
-  
-        
           <Navbar/>
-        
-   
-          
-        <div>
+         <div>
           {this.state.parents.map((parent, index) => {
             return (
               <Card key={index}>
@@ -73,7 +73,7 @@ componentWillMount() {
                     />
                   }
                 >
-                  <img src="https://i.imgur.com/03PI7RD.jpg" alt="" />
+                  <img src="https://i.imgur.com/bce5yjY.jpg" alt="" />
                 </CardMedia>
                 <CardTitle title={parent.name} />
 
