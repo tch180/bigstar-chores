@@ -12,6 +12,7 @@ class Api::ChoresController < ApplicationController
        
         render json: @chores
       end
+      
       def special
         @parent = Parent.find_by_id(params[:parent_id])
          @chores = @parent.chores

@@ -9,11 +9,13 @@ import Newchild from '../children/newchild'
 import Navbar from '../Navbar'
 
 
-const Parentstyle = styled.div`background: green;
+const Parentstyle = styled.div`
+background: green;
 
 
 `
-const ParentContainer = styled.div`background: grey;
+const ParentContainer = styled.div`
+background: grey;
 
 `
 

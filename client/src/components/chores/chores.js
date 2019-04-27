@@ -7,7 +7,7 @@ import AppBar from "material-ui/AppBar";
 import Navbar from '../Navbar'
 import AddChores from './addchores'
 
-class componentName extends Component {
+class chores extends Component {
   state = {
     chorespecial:[],
     chores:[],
@@ -79,4 +79,4 @@ Assign Chores
   }
 }
 
-export default componentName;
+export default chores;
