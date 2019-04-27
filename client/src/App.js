@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 ///////////////
 //Matieral ui 
 ///////////////
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
+// import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+// import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 ///////////////
 // Componets 
@@ -20,39 +20,43 @@ import Chores from './components/chores/chores'
 import addchores from './components/chores/addchores'
 import chorestable2 from './components/chores/chorestable2'
 import rewards from './components/rewards/rewards'
+// import Navbar from '../src/components/Navbar'
 
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <MuiThemeProvider>
+      // <MuiThemeProvider>
       
       <Router>
 
       <div>
-      {/* <Navbar/> */}
+        <div>
+        <Navbar/>
+
+        </div>
         <Switch>
 
 
           <Route exact path='/' component={Homepage}/>
-          <Route exact path= '/Parents' component={Parents}/>
-          <Route exact path='/parents/newParent' component={newParent}/>
+            <Route exact path= '/Parents' component={Parents}/> 
+          {/* <Route exact path='/parents/newParent' component={newParent}/>
           <Route exact path='/parents/newchild'component={newchild}/>          
-          <Route exact path='/parents/:parentid/chores' component={Chores}/>
-          {/* {choresview}/> */}
-          <Route exact path='/parents/:parentid/assign' component={Chores}/>
-          <Route exact path='/chores' component={chorestable2}/>
-          <Route exact path='/child' component={Child}/>
-          <Route exact path='/addchores' component={addchores}/>
-          <Route exact path='/rewards' component={rewards}/>
+          <Route exact path='/parents/:parentid/chores' component={Chores}/>  */}
+           {/* {choresview}/>  */}
+          {/* <Route exact path='/parents/:parentid/assign' component={Chores}/> */}
+          {/* <Route exact path='/chores' component={chorestable2}/> */}
+          {/* <Route exact path='/child' component={Child}/> */}
+          {/* <Route exact path='/addchores' component={addchores}/> */}
+          {/* <Route exact path='/rewards' component={rewards}/>  */}
 
         </Switch>
 
       </div>
 
       </Router>
-      </MuiThemeProvider>
+      // </MuiThemeProvider>
 
      
 

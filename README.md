@@ -6,6 +6,12 @@ Welcome to Bigstar Chores,
 
 
 
+Start: foreman start -f Procfile.dev
+
+Major Update: 
+Style and Layout
+ - Removing Materilize and changing to bootstrap
+    - Materialize tables are an issue
 
 
 
